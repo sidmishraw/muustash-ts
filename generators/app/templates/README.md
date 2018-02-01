@@ -1,0 +1,4 @@
+# <%= projectName -%>
+
+
+Author: <%= authorName -%>

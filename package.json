@@ -1,0 +1,18 @@
+{
+  "name": "generator-muustash-ts",
+  "version": "0.1.0",
+  "description": "Generates a Typescript project for VS Code.",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "files": [
+    "generators"
+  ],
+  "author": "Sidharth Mishra <sidmishraw@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^9.4.0",
+    "tslint-config-prettier": "^1.6.0",
+    "yeoman-generator": "^2.0.2"
+  }
+}
