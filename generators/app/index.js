@@ -4,7 +4,7 @@
  * @description The default yeoman generator. Invoked when using `yo <name>`.
  * @created Wed Jan 31 2018 20:07:13 GMT-0800 (PST)
  * @copyright 2018 Sidharth Mishra
- * @last-modified Wed Jan 31 2018 23:09:29 GMT-0800 (PST)
+ * @last-modified Fri Feb 02 2018 13:37:28 GMT-0800 (PST)
  */
 //==============================================================================================
 
@@ -128,6 +128,7 @@ module.exports = class extends Generator {
    * Install the dependencies.
    */
   install() {
+    process.chdir(this.projectName); // change to the project dir before installing
     this.npmInstall(["@types/node", "tslint-config-prettier"], { "-D": true }).catch(
       err => this.log(`Error:: ${JSON.stringify(err)}`)
     );
@@ -138,6 +139,7 @@ module.exports = class extends Generator {
    * @returns A promise
    */
   end() {
-    console.log(`Done!`);
+    this.spawnCommandSync("git", ["init", "--quiet"]);
+    this.log(`Done!`);
   }
 };

@@ -22,6 +22,10 @@ and follow the on-screen instructions.
 
 ## Changelog
 
+### v0.1.1
+
+* Changed directory before installing dependencies and git init.
+
 ### v0.1.0
 
 * Initial release. Basic templates for now.
